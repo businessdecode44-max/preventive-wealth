@@ -1,0 +1,583 @@
+Startup Routine
+
+Read all files in context/ — this is your foundation
+Read Memory.md — this is what you've learned over time
+Use both to shape every task
+
+Memory System
+
+When I correct you or you learn something new, update the relevant section in MEMORY.md:
+
+Voice — tone, phrasing, writing corrections
+Process — how I want tasks done
+People — how people are, relationships
+Projects — active work, current tasks, status
+Output — formats, naming, delivery preferences
+Tools — which tools to use and how
+
+Keep Memory.md current. When something changes, update it in place — replace outdated info, don't just append below it. The file should always reflect the latest state.
+
+# Preventive Wealth - agents.md
+
+## Brand Overview
+
+Brand Name:
+Preventive Wealth
+
+Primary Tagline:
+Financial Literacy as Prevention
+
+Supporting Statement:
+Helping individuals and families understand how money, protection, debt, taxes, and legacy work together before financial emergencies happen.
+
+Website Goal:
+Build a modern financial literacy ecosystem that educates, generates leads, sells digital educational products, nurtures trust, and supports long-term financial wellness through practical education.
+
+Core Positioning:
+Preventive Wealth positions financial literacy as a proactive form of prevention.
+
+Financial literacy helps prevent:
+- debt
+- financial crisis
+- generational poverty
+- poor planning
+- wealth loss
+- family instability
+
+Preventive Wealth is a financial education and wealth literacy platform first. Products and services support the educational ecosystem.
+
+---
+
+# Brand Philosophy
+
+Many financial crises happen because people were never taught how money, protection, debt, taxes, and legacy actually work together.
+
+Preventive Wealth exists to make financial literacy practical, understandable, and actionable before financial emergencies happen.
+
+The brand focuses on:
+- practical financial education
+- family-centered financial wellness
+- protection-based financial literacy
+- generational thinking
+- preventive financial behavior
+- emotionally intelligent financial education
+
+---
+
+# Mission
+
+To make financial literacy practical, understandable, and actionable for individuals and families before financial emergencies happen.
+
+---
+
+# Vision
+
+To become a trusted global financial literacy platform helping families build stronger financial futures through education, prevention, and long-term wealth awareness.
+
+---
+
+# Core Values
+
+- Education before selling
+- Trust over hype
+- Family-centered thinking
+- Clarity over complexity
+- Long-term wealth awareness
+- Financial responsibility
+- Emotional intelligence
+- Prevention-focused education
+
+---
+
+# Brand Voice
+
+Tone:
+- Educational
+- Calm
+- Human
+- Professional
+- Trustworthy
+- Clear
+- Practical
+- Encouraging
+
+Avoid:
+- aggressive sales language
+- unrealistic wealth claims
+- spammy financial marketing
+- fear manipulation
+- hype-driven content
+- “get rich quick” messaging
+
+Preferred Communication Style:
+- teach before selling
+- explain concepts simply
+- use storytelling
+- use relatable family examples
+- simplify complex financial concepts
+- emphasize preparation and prevention
+
+---
+
+# Primary Audiences
+
+## Families
+Parents seeking financial protection and long-term planning education.
+
+## Young Professionals
+Individuals seeking practical financial literacy and wealth-building education.
+
+## Small Business Owners
+Entrepreneurs interested in protection, business capital, tax education, and wealth structuring.
+
+## First-Generation Wealth Builders
+Individuals and families seeking guidance on money, protection, and financial legacy.
+
+## Middle-Income Households
+People seeking practical, understandable financial education without high-level financial jargon.
+
+---
+
+# Product Ecosystem
+
+## Preventive Wealth Series
+
+### Series 101
+How to Use Life Insurance to Protect Your Mortgage
+
+### Series 102
+How to Use Life Insurance for College Funding
+
+### Series 103
+How to Use Life Insurance to Raise Capital for Business
+
+### Series 104
+How to Use Life Insurance to Save on Taxes
+
+### Series 105
+How to Use Life Insurance for Lifetime Income
+
+### Series 106
+How to Use Life Insurance to Protect Your Assets
+
+### Series 107
+How to Create a Million-Dollar Baby Using Life Insurance
+
+### Series 108
+How to Transfer Generational Wealth Using Life Insurance
+
+### Series 109
+How to Become Your Own Bank (Infinite Banking)
+
+### Series 110
+How to Use Life Insurance for Living Benefits
+
+---
+
+# Offer Structure
+
+Primary Offers:
+- Individual eBooks
+- Full eBook bundle
+- Premium consultation package
+
+Future Offers:
+- Webinars
+- Workshops
+- Courses
+- Membership community
+- Financial literacy toolkit
+- Mobile app
+- AI financial literacy assistant
+- Certification programs
+
+---
+
+# Website Architecture
+
+## Core Pages
+
+- Home
+- About
+- eBook Series
+- Learning Hub
+- Resources
+- Blog
+- Videos/Reels
+- Contact
+- Book Consultation
+- Financial Literacy Quiz
+- Free Downloads
+
+---
+
+# Homepage Messaging
+
+Headline:
+Financial Literacy as Prevention
+
+Supporting Statement:
+Helping individuals and families understand how money, protection, debt, taxes, and legacy work together before financial emergencies happen.
+
+Primary CTAs:
+- Start Learning
+- Explore the eBook Series
+- Book a Free Financial Literacy Session
+
+---
+
+# Core Learning Categories
+
+- Mortgage Protection
+- Family Financial Literacy
+- Generational Wealth
+- College Planning
+- Business Funding
+- Retirement Income
+- Tax Education
+- Infinite Banking
+- Asset Protection
+- Living Benefits
+
+---
+
+# Content Strategy
+
+## Content Pillars
+
+### Financial Literacy
+Simple explanations of practical money concepts.
+
+### Wealth Protection
+Teaching protection strategies and financial preparedness.
+
+### Family Finance
+Financial education for families and future generations.
+
+### Legacy Education
+Wealth transfer and long-term planning concepts.
+
+### Prevention-Based Finance
+Content connecting prevention principles with financial behavior.
+
+### Insurance Literacy
+Educational explanations of how life insurance works within financial planning.
+
+---
+
+# Content Formats
+
+- Blog posts
+- LinkedIn posts
+- Instagram carousels
+- TikTok/Reels scripts
+- YouTube Shorts
+- Educational videos
+- Infographics
+- Email newsletters
+- Financial quizzes
+- Downloadable guides
+
+---
+
+# AI Agents
+
+## Content Agent
+
+Responsibilities:
+- generate blog articles
+- generate educational content
+- create email newsletters
+- create social captions
+- create scripts for reels and shorts
+- create educational storytelling content
+
+Rules:
+- educational first
+- avoid hype
+- simplify concepts
+- maintain brand tone
+
+---
+
+## Research Agent
+
+Responsibilities:
+- identify trending financial literacy topics
+- monitor audience pain points
+- analyze viral educational content
+- identify SEO opportunities
+- monitor mortgage, family finance, and wealth discussions
+
+---
+
+## Design Agent
+
+Responsibilities:
+- generate carousel concepts
+- generate visual layouts
+- create eBook promotional graphics
+- create social media assets
+- maintain brand consistency
+
+Brand Design Rules:
+- clean layouts
+- navy, green, gold palette
+- modern typography
+- calm and premium aesthetic
+
+---
+
+## Funnel Agent
+
+Responsibilities:
+- optimize landing pages
+- generate CTA copy
+- improve lead conversion
+- structure educational funnels
+- optimize user flow
+
+---
+
+## Email Agent
+
+Responsibilities:
+- welcome sequences
+- lead nurturing
+- educational campaigns
+- eBook promotions
+- webinar invitations
+- consultation follow-ups
+
+---
+
+## Analytics Agent
+
+Responsibilities:
+- monitor website traffic
+- analyze conversion rates
+- monitor sales funnels
+- analyze social engagement
+- generate performance summaries
+
+---
+
+# Automation Workflows
+
+## Social Media Workflow
+
+Trend Research
+→ Content Generation
+→ Graphic Generation
+→ Approval Queue
+→ Scheduling
+→ Analytics Tracking
+
+---
+
+## Lead Generation Workflow
+
+Traffic Source
+→ Landing Page
+→ Free Resource
+→ Email Capture
+→ Email Sequence
+→ eBook Offer
+→ Consultation CTA
+
+---
+
+## eBook Purchase Workflow
+
+Product Page
+→ Stripe Checkout
+→ Purchase Confirmation
+→ Digital Delivery
+→ Upsell Sequence
+→ Feedback Collection
+
+---
+
+# Tech Stack
+
+Frontend:
+- Next.js
+- Tailwind CSS
+
+Backend:
+- Supabase
+
+Payments:
+- Stripe
+
+Automation:
+- Trigger.dev
+
+Email:
+- ConvertKit or MailerLite
+
+Scheduling:
+- Calendly
+
+Hosting:
+- Vercel
+
+Repository:
+- GitHub
+
+Analytics:
+- Google Analytics
+- PostHog
+
+Media:
+- Cloudinary
+
+AI Layer:
+- OpenAI
+- Claude
+- OpenRouter
+
+---
+
+# Environment Variables
+
+Required:
+- NEXT_PUBLIC_SITE_URL
+- STRIPE_SECRET_KEY
+- NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+- STRIPE_WEBHOOK_SECRET
+- SUPABASE_URL
+- SUPABASE_ANON_KEY
+- OPENAI_API_KEY
+- OPENROUTER_API_KEY
+- RESEND_API_KEY
+- CALENDLY_API_KEY
+
+---
+
+# Folder Structure
+
+/app
+/components
+/lib
+/content
+/workflows
+/emails
+/public
+/ebooks
+/agents
+/analytics
+/videos
+/resources
+
+---
+
+# SEO Direction
+
+Primary SEO Themes:
+- financial literacy
+- family finance
+- wealth protection
+- mortgage protection
+- financial education
+- generational wealth
+- financial preparedness
+- infinite banking education
+- living benefits education
+
+SEO Style:
+- educational
+- long-form value
+- beginner-friendly
+- practical
+- emotionally intelligent
+
+---
+
+# Compliance Guidance
+
+Preventive Wealth provides financial education only.
+
+Do not:
+- guarantee financial outcomes
+- promise wealth creation
+- provide unauthorized financial advice
+- misrepresent insurance products
+- create misleading income expectations
+
+All content should maintain educational framing.
+
+---
+
+# Social Media Direction
+
+Primary Platforms:
+- Instagram
+- LinkedIn
+- YouTube
+- TikTok
+- Facebook
+
+Content Goals:
+- educate
+- build trust
+- grow audience
+- drive email signups
+- promote eBooks
+- generate consultation leads
+
+---
+
+# Visual Identity
+
+Primary Colors:
+- Navy Blue
+- Forest Green
+- Gold Accents
+- White Backgrounds
+
+Visual Style:
+- premium
+- modern
+- clean
+- calm
+- educational
+- trustworthy
+- family-oriented
+
+Avoid:
+- flashy finance aesthetics
+- crypto-style branding
+- dark aggressive visuals
+- cluttered interfaces
+
+---
+
+# Future Expansion
+
+Planned Systems:
+- AI financial literacy assistant
+- financial calculators
+- membership portal
+- mobile app
+- webinar platform
+- multilingual content
+- certification courses
+- partner affiliate ecosystem
+- automated marketing systems
+- financial literacy dashboards
+
+---
+
+# Long-Term Goal
+
+Build Preventive Wealth into a scalable financial literacy ecosystem that combines:
+- education
+- media
+- automation
+- digital products
+- storytelling
+- AI-powered learning
+- family-centered financial wellness
+
+while maintaining trust, simplicity, and prevention-focused financial education.

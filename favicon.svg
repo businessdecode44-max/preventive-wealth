@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Preventive Wealth">
+  <rect width="64" height="64" rx="8" fill="#061a37"/>
+  <path d="M32 8 50 16v14c0 12-7.6 21.3-18 26-10.4-4.7-18-14-18-26V16L32 8Z" fill="#c9952c"/>
+  <path d="M32 14 44 19.4V30c0 8-4.7 14.7-12 18.6C24.7 44.7 20 38 20 30V19.4L32 14Z" fill="#061a37"/>
+  <path d="M24 34c5-8 11-8 16 0M26 28h12M32 22v20" fill="none" stroke="#f4cf76" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

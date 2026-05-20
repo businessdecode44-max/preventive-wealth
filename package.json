@@ -1,0 +1,12 @@
+{
+  "name": "preventive-wealth-landing-page",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static landing page for Preventive Wealth.",
+  "scripts": {
+    "check": "node scripts/production-check.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
