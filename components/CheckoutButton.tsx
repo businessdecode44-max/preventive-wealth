@@ -47,7 +47,8 @@ export function CheckoutButton({ productKey, productName, className = "button bu
         body: JSON.stringify({ productKey, referral })
       });
 
-      const payload = (await response.json()) as { url?: string; error?: string };
+      const responseText = await response.text();
+      const payload = responseText ? (JSON.parse(responseText) as { url?: string; error?: string }) : {};
 
       if (!response.ok || !payload.url) {
         throw new Error(payload.error || "Checkout could not be started.");

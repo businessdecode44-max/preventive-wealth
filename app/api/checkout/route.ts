@@ -18,50 +18,57 @@ type CheckoutRequest = {
 };
 
 export async function POST(request: Request) {
-  if (!stripe) {
-    return NextResponse.json({ error: "Stripe is not configured. Add STRIPE_SECRET_KEY in Vercel." }, { status: 500 });
-  }
+  try {
+    if (!stripe) {
+      return NextResponse.json({ error: "Stripe is not configured. Add STRIPE_SECRET_KEY in Vercel." }, { status: 500 });
+    }
 
-  const body = (await request.json()) as CheckoutRequest;
-  const product = allCheckoutProducts.find((item) => item.key === body.productKey);
+    const body = (await request.json()) as CheckoutRequest;
+    const product = allCheckoutProducts.find((item) => item.key === body.productKey);
 
-  if (!product) {
-    return NextResponse.json({ error: "Product was not found." }, { status: 400 });
-  }
+    if (!product) {
+      return NextResponse.json({ error: "Product was not found." }, { status: 400 });
+    }
 
-  const priceId = process.env[product.priceEnv];
+    const priceId = process.env[product.priceEnv];
 
-  if (!priceId) {
-    return NextResponse.json({ error: `Missing ${product.priceEnv} in Vercel environment variables.` }, { status: 500 });
-  }
+    if (!priceId) {
+      return NextResponse.json({ error: `Missing ${product.priceEnv} in Vercel environment variables.` }, { status: 500 });
+    }
 
-  const referral = typeof body.referral === "string" ? normalizeAffiliateSlug(body.referral) : undefined;
+    const referral = typeof body.referral === "string" ? normalizeAffiliateSlug(body.referral) : undefined;
 
-  const session = await stripe.checkout.sessions.create({
-    mode: "payment",
-    line_items: [
-      {
-        price: priceId,
-        quantity: 1
-      }
-    ],
-    customer_creation: "always",
-    client_reference_id: referral,
-    metadata: {
-      product_key: product.key,
-      product_name: product.title,
-      ...(referral ? { affiliate_ref: referral } : {})
-    },
-    payment_intent_data: {
+    const session = await stripe.checkout.sessions.create({
+      mode: "payment",
+      line_items: [
+        {
+          price: priceId,
+          quantity: 1
+        }
+      ],
+      customer_creation: "always",
+      client_reference_id: referral,
       metadata: {
         product_key: product.key,
         product_name: product.title,
         ...(referral ? { affiliate_ref: referral } : {})
-      }
-    },
-    success_url: `${siteUrl}/?checkout=success&product=${encodeURIComponent(product.key)}`,
-    cancel_url: `${siteUrl}/?checkout=cancelled&product=${encodeURIComponent(product.key)}`
-  });
+      },
+      payment_intent_data: {
+        metadata: {
+          product_key: product.key,
+          product_name: product.title,
+          ...(referral ? { affiliate_ref: referral } : {})
+        }
+      },
+      success_url: `${siteUrl}/?checkout=success&product=${encodeURIComponent(product.key)}`,
+      cancel_url: `${siteUrl}/?checkout=cancelled&product=${encodeURIComponent(product.key)}`
+    });
 
-  return NextResponse.json({ url: session.url });
+    return NextResponse.json({ url: session.url });
+  } catch (error) {
+    return NextResponse.json(
+      { error: error instanceof Error ? error.message : "Checkout could not be started." },
+      { status: 500 }
+    );
+  }
 }
