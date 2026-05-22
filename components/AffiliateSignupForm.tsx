@@ -39,7 +39,8 @@ export function AffiliateSignupForm() {
         })
       });
 
-      const payload = (await response.json()) as SignupResponse;
+      const responseText = await response.text();
+      const payload = responseText ? (JSON.parse(responseText) as SignupResponse) : {};
 
       if (!response.ok) {
         throw new Error(payload.error || "Application could not be submitted.");
