@@ -1,16 +1,9 @@
 import { NextResponse } from "next/server";
-import Stripe from "stripe";
 import { allCheckoutProducts } from "@/lib/products";
 import { normalizeAffiliateSlug } from "@/lib/affiliate";
+import { getStripe } from "@/lib/stripe-server";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://preventivewealth.com";
-const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
-
-const stripe = stripeSecretKey
-  ? new Stripe(stripeSecretKey, {
-      apiVersion: "2025-08-27.basil"
-    })
-  : null;
 
 type CheckoutRequest = {
   productKey?: string;
@@ -19,10 +12,7 @@ type CheckoutRequest = {
 
 export async function POST(request: Request) {
   try {
-    if (!stripe) {
-      return NextResponse.json({ error: "Stripe is not configured. Add STRIPE_SECRET_KEY in Vercel." }, { status: 500 });
-    }
-
+    const stripe = getStripe();
     const body = (await request.json()) as CheckoutRequest;
     const product = allCheckoutProducts.find((item) => item.key === body.productKey);
 
@@ -60,7 +50,7 @@ export async function POST(request: Request) {
           ...(referral ? { affiliate_ref: referral } : {})
         }
       },
-      success_url: `${siteUrl}/?checkout=success&product=${encodeURIComponent(product.key)}`,
+      success_url: `${siteUrl}/thank-you?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${siteUrl}/?checkout=cancelled&product=${encodeURIComponent(product.key)}`
     });
 

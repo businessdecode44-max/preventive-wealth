@@ -9,10 +9,12 @@ const appPage = read("app/page.tsx");
 const layout = read("app/layout.tsx");
 const checkoutRoute = read("app/api/checkout/route.ts");
 const webhookRoute = read("app/api/stripe/webhook/route.ts");
+const thankYouPage = read("app/thank-you/page.tsx");
 const affiliateSignupRoute = read("app/api/affiliates/signup/route.ts");
 const affiliateSection = read("components/AffiliateSection.tsx");
 const affiliateSchema = read("supabase/affiliate-schema.sql");
 const products = read("lib/products.ts");
+const stripeServer = read("lib/stripe-server.ts");
 const videos = read("lib/videos.ts");
 const vercel = read("vercel.json");
 const envExample = read(".env.example");
@@ -33,8 +35,11 @@ const requiredFiles = [
   "lib/videos.ts",
   "lib/analytics.ts",
   "lib/affiliate.ts",
+  "lib/affiliate-orders.ts",
+  "lib/stripe-server.ts",
   "lib/supabase/server.ts",
   "app/affiliates/page.tsx",
+  "app/thank-you/page.tsx",
   "app/admin/affiliates/page.tsx",
   "app/api/affiliates/signup/route.ts",
   "app/api/stripe/webhook/route.ts",
@@ -80,14 +85,30 @@ const customAffiliateEnvVars = [
   "DEFAULT_AFFILIATE_COMMISSION_RATE"
 ];
 
+const downloadEnvVars = [
+  "DOWNLOAD_URL_BUNDLE",
+  "DOWNLOAD_URL_101",
+  "DOWNLOAD_URL_102",
+  "DOWNLOAD_URL_103",
+  "DOWNLOAD_URL_104",
+  "DOWNLOAD_URL_105",
+  "DOWNLOAD_URL_106",
+  "DOWNLOAD_URL_107",
+  "DOWNLOAD_URL_108",
+  "DOWNLOAD_URL_109",
+  "DOWNLOAD_URL_110"
+];
+
 const allSource = [
   appPage,
   layout,
   checkoutRoute,
   webhookRoute,
+  thankYouPage,
   affiliateSignupRoute,
   affiliateSection,
   products,
+  stripeServer,
   videos,
   vercel,
   envExample
@@ -112,7 +133,11 @@ const checks = [
   },
   {
     name: "Checkout route uses Stripe server-side only",
-    pass: checkoutRoute.includes("STRIPE_SECRET_KEY") && checkoutRoute.includes("client_reference_id") && checkoutRoute.includes("affiliate_ref")
+    pass:
+      stripeServer.includes("STRIPE_SECRET_KEY") &&
+      checkoutRoute.includes("getStripe") &&
+      checkoutRoute.includes("client_reference_id") &&
+      checkoutRoute.includes("affiliate_ref")
   },
   {
     name: "Custom affiliate database and webhook are configured",
@@ -120,6 +145,7 @@ const checks = [
       affiliateSchema.includes("create table if not exists public.affiliates") &&
       affiliateSchema.includes("create table if not exists public.affiliate_orders") &&
       webhookRoute.includes("checkout.session.completed") &&
+      thankYouPage.includes("recordAffiliateOrderFromSession") &&
       affiliateSignupRoute.includes("affiliates")
   },
   {
@@ -129,6 +155,10 @@ const checks = [
   {
     name: "Custom affiliate environment variables are documented",
     pass: customAffiliateEnvVars.every((name) => envExample.includes(name))
+  },
+  {
+    name: "Download delivery environment variables are documented",
+    pass: downloadEnvVars.every((name) => envExample.includes(name)) && thankYouPage.includes("Download")
   },
   {
     name: "Calendly session link is present",

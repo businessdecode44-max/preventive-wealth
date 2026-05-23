@@ -599,7 +599,8 @@ h3 {
 }
 
 .affiliate-application-page,
-.admin-page {
+.admin-page,
+.thank-you-page {
   min-height: 100vh;
   background: var(--soft);
 }
@@ -713,6 +714,32 @@ h3 {
   cursor: pointer;
 }
 
+.thank-you-section {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+}
+
+.thank-you-panel {
+  display: grid;
+  gap: 16px;
+  width: min(100%, 680px);
+  padding: clamp(24px, 5vw, 42px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+.thank-you-panel h1 {
+  margin-bottom: 0;
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+}
+
+.thank-you-panel .button {
+  width: fit-content;
+}
+
 @media (max-width: 1120px) {
   .product-grid,
   .video-card-grid {
@@ -805,6 +832,10 @@ h3 {
   }
 
   .button {
+    width: 100%;
+  }
+
+  .thank-you-panel .button {
     width: 100%;
   }
 }

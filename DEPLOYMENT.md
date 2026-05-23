@@ -60,6 +60,17 @@ SUPABASE_URL=https://your-project.supabase.co
 SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
 AFFILIATE_ADMIN_PASSWORD=choose_a_strong_admin_password
 DEFAULT_AFFILIATE_COMMISSION_RATE=0.40
+DOWNLOAD_URL_BUNDLE=https://your-secure-download-link
+DOWNLOAD_URL_101=https://your-secure-download-link
+DOWNLOAD_URL_102=https://your-secure-download-link
+DOWNLOAD_URL_103=https://your-secure-download-link
+DOWNLOAD_URL_104=https://your-secure-download-link
+DOWNLOAD_URL_105=https://your-secure-download-link
+DOWNLOAD_URL_106=https://your-secure-download-link
+DOWNLOAD_URL_107=https://your-secure-download-link
+DOWNLOAD_URL_108=https://your-secure-download-link
+DOWNLOAD_URL_109=https://your-secure-download-link
+DOWNLOAD_URL_110=https://your-secure-download-link
 ```
 
 Never commit real Stripe secret keys, Stripe webhook secrets, Supabase service-role keys, or admin passwords.
@@ -98,6 +109,34 @@ checkout.session.completed
 6. Copy the webhook signing secret into `STRIPE_WEBHOOK_SECRET`.
 
 The checkout API stores the affiliate code in Stripe `client_reference_id`, Checkout Session metadata, and PaymentIntent metadata. The webhook records commission only when the affiliate exists and has `status='approved'`.
+
+The checkout success page is:
+
+```text
+https://preventivewealth.com/thank-you?session_id={CHECKOUT_SESSION_ID}
+```
+
+That page verifies the paid Stripe session, shows the matching download link, and also records the affiliate commission as a backup if the webhook has not fired yet.
+
+## Digital Download Setup
+
+Store the eBook files somewhere private or controlled, then add one download URL per product in Vercel:
+
+```text
+DOWNLOAD_URL_BUNDLE
+DOWNLOAD_URL_101
+DOWNLOAD_URL_102
+DOWNLOAD_URL_103
+DOWNLOAD_URL_104
+DOWNLOAD_URL_105
+DOWNLOAD_URL_106
+DOWNLOAD_URL_107
+DOWNLOAD_URL_108
+DOWNLOAD_URL_109
+DOWNLOAD_URL_110
+```
+
+These can be secure Google Drive, Dropbox, Supabase Storage, or other delivery links. After changing them, redeploy Vercel.
 
 ## Affiliate Links And Admin
 
@@ -194,8 +233,10 @@ If Vercel displays a different DNS target inside the domain settings, use the va
 - Stripe purchase attribution test:
   - Click a product button from the referred session.
   - Complete a Stripe test checkout.
+  - Confirm the buyer lands on `/thank-you`.
+  - Confirm the correct download button appears.
   - Confirm Stripe Checkout Session metadata includes `affiliate_ref`.
-  - Confirm Supabase `affiliate_orders` records the commission after the webhook fires.
+  - Confirm Supabase `affiliate_orders` records the commission after webhook delivery or thank-you page verification.
 - Admin payout test:
   - Open `/admin/affiliates`.
   - Log in using `AFFILIATE_ADMIN_PASSWORD`.
@@ -227,4 +268,4 @@ If Vercel displays a different DNS target inside the domain settings, use the va
 11. Submit affiliate signup.
 12. Click **Request A Session** and confirm Calendly opens.
 13. Submit the resource form and confirm the resource pack downloads.
-14. Confirm videos, GA4, Stripe attribution, webhook commission recording, and Vercel Analytics after launch.
+14. Confirm videos, GA4, Stripe attribution, download delivery, commission recording, and Vercel Analytics after launch.
