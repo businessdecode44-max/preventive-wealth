@@ -47,11 +47,11 @@ export function AffiliateSignupForm() {
       }
 
       trackEvent("affiliate_signup_submit", {
-        affiliate_status: payload.status || "pending"
+        affiliate_status: payload.status || "approved"
       });
 
       setAffiliateLink(payload.affiliateLink || null);
-      setMessage("Application submitted. Your link is ready, and commissions begin after admin approval.");
+      setMessage("Application submitted. Your affiliate link is active now.");
       form.reset();
     } catch (error) {
       setMessage(error instanceof Error ? error.message : "Application could not be submitted.");

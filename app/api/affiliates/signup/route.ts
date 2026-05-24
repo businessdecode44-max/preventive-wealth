@@ -39,7 +39,7 @@ export async function POST(request: Request) {
         slug,
         website,
         audience,
-        status: "pending",
+        status: "approved",
         commission_rate: defaultCommissionRate
       })
       .select("slug,status")

@@ -85,7 +85,7 @@ Never commit real Stripe secret keys, Stripe webhook secrets, Supabase service-r
 6. Copy the service-role key to `SUPABASE_SERVICE_ROLE_KEY`.
 7. Keep Row Level Security enabled. Server routes use the service-role key; no public browser database access is required.
 
-Affiliate applications go into `affiliates` with `status='pending'`. Before commissions are recorded, update an affiliate to `status='approved'` in Supabase or a future admin approval control.
+Affiliate applications are auto-approved and go into `affiliates` with `status='approved'`.
 
 ## Stripe Setup
 
@@ -226,7 +226,7 @@ If Vercel displays a different DNS target inside the domain settings, use the va
   - Open `/affiliates`.
   - Submit a test application.
   - Confirm a row appears in Supabase `affiliates`.
-  - Approve the affiliate by setting `status='approved'`.
+  - Confirm the affiliate appears with `status='approved'`.
 - Affiliate link test:
   - Open an incognito window at `https://preventivewealth.com/?ref=test-affiliate`.
   - Confirm browser cookies include `pw_affiliate_ref`.

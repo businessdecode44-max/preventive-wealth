@@ -7,7 +7,7 @@ create table if not exists public.affiliates (
   slug text not null unique,
   website text,
   audience text,
-  status text not null default 'pending' check (status in ('pending', 'approved', 'rejected', 'paused')),
+  status text not null default 'approved' check (status in ('pending', 'approved', 'rejected', 'paused')),
   commission_rate numeric(5,4) not null default 0.4000 check (commission_rate >= 0 and commission_rate <= 1),
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()

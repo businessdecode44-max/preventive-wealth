@@ -13,7 +13,7 @@ export default function AffiliatesPage() {
           <p className="section-kicker">Affiliate Program</p>
           <h1>Help families learn financial literacy as prevention.</h1>
           <p className="hero-statement">
-            Apply to become a Preventive Wealth affiliate. Approved partners receive a unique referral link and earn
+            Apply to become a Preventive Wealth affiliate. Partners receive a unique referral link and earn
             commission on tracked digital product purchases.
           </p>
         </div>

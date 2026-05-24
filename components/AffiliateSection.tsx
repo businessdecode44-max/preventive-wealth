@@ -14,7 +14,7 @@ export function AffiliateSection() {
       <div className="affiliate-panel">
         <h3>How affiliate links work</h3>
         <p>
-          Approved affiliates receive a link such as preventivewealth.com/?ref=affiliate-code. The site stores the
+          Affiliates receive a link such as preventivewealth.com/?ref=affiliate-code. The site stores the
           referral in a 30-day cookie, passes it into Stripe metadata, and records commissions after successful payment.
         </p>
         <TrackedLink
